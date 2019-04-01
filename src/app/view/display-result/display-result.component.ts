@@ -28,6 +28,7 @@ export class DisplayResultComponent implements OnInit {
   getShows(): void {
     this.dataService.getQuery(this.query).subscribe((results) => {
       this.shows = results;
+      console.log(this.shows);
     });
   }
 }
