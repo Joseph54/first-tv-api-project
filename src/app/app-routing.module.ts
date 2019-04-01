@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {DisplayResultComponent} from './view/display-result/display-result.component';
+import {SeasonsComponent} from './view/seasons/seasons.component';
 
-const routes: Routes = [];
+
+
+const routes: Routes = [
+  {path: '', pathMatch: 'full', component: DisplayResultComponent},
+  {path: 'search/:id', component: DisplayResultComponent},
+  {path: 'seasons/:id', component: SeasonsComponent},
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

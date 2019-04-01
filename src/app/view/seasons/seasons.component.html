@@ -1,0 +1,16 @@
+<mat-accordion *ngIf="seasons">
+  <mat-expansion-panel *ngFor="let season of seasons">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{season.seasons.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{season.seasons.premiered}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <!--here goes all hidden html only shows when panels is open-->
+    <img [src]="season.seasons.image.medium">
+    <span [innerHTML]="season.seasons.summary"></span>
+    <button routerLink="/seasons/{{season.seasons.id}}">Details</button>
+  </mat-expansion-panel>
+</mat-accordion>
