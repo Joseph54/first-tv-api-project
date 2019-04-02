@@ -9,7 +9,8 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./display-result.component.css']
 })
 export class DisplayResultComponent implements OnInit {
-
+// getting seasons with route
+// getting seasons from the datService with an api call using the id
   query: string;
   shows: any;
 

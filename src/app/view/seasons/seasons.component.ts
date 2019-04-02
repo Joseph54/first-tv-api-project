@@ -7,8 +7,9 @@ import {ActivatedRoute} from '@angular/router';
   templateUrl: './seasons.component.html',
   styleUrls: ['./seasons.component.css']
 })
+// getting seasons with route
+// getting seasons from the datService with an api call using the id
 export class SeasonsComponent implements OnInit {
-
   showId: string;
   seasons: any;
   constructor(private dataService: DataService,

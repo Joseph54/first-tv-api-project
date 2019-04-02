@@ -15,6 +15,8 @@ export class DataService {
 
 constructor(private httpClient: HttpClient) {}
 
+// connecting to the api
+
   getQuery(query: string): Observable<any> {
     return this.httpClient.get<any>('http://api.tvmaze.com/search/shows?q=' + query);
   }

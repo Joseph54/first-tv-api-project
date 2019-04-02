@@ -4,7 +4,7 @@ import {DisplayResultComponent} from './view/display-result/display-result.compo
 import {SeasonsComponent} from './view/seasons/seasons.component';
 
 
-
+// routing page pages
 
 const routes: Routes = [
   {path: 'search/:id', component: DisplayResultComponent},

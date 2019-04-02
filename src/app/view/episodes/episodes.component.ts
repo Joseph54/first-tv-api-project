@@ -8,6 +8,8 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./episodes.component.css']
 })
 export class EpisodesComponent implements OnInit {
+  // Used @input to bring id from the parent
+  // getting episodes with the id from the dataService from a api call
   @Input() id: number;
   episodes: any;
   constructor(private dataService: DataService,
@@ -20,6 +22,4 @@ export class EpisodesComponent implements OnInit {
     });
   }
 
-getShows(): void {
-}
 }
