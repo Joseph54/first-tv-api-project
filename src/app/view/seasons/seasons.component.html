@@ -11,6 +11,8 @@
     <!--here goes all hidden html only shows when panels is open-->
     <span *ngIf="season.image"><img [src]="season.image.medium"></span>
     <span [innerHTML]="season.summary"></span>
-    <button routerLink="/seasons/{{season.id}}">Details</button>
+    <ng-template matExpansionPanelContent>
+      <app-episodes [id]="season.id"></app-episodes>
+    </ng-template>
   </mat-expansion-panel>
 </mat-accordion>

@@ -1,3 +1,18 @@
-<p>
-  episodes works!
-</p>
+<mat-accordion *ngIf="episodes">
+  <mat-expansion-panel *ngFor="let episode of episodes">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        episode: {{episode.number}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{episode.premiered}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <!--here goes all hidden html only shows when panels is open-->
+    <span *ngIf="episode.image"><img [src]="episode.image.medium"></span>
+    <span [innerHTML]="episode.summary"></span>
+    <!--<ng-template matExpansionPanelContent>
+      <app-episodes [id]="episode.id"></app-episodes>
+    </ng-template>-->
+  </mat-expansion-panel>
+</mat-accordion>

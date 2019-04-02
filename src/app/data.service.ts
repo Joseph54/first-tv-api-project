@@ -21,4 +21,7 @@ constructor(private httpClient: HttpClient) {}
   getSeasons(showId: string): Observable<any> {
   return this.httpClient.get<any>('http://api.tvmaze.com/shows/' + showId + '/seasons');
 }
+  getEpisodes(episodeId: number): Observable<any> {
+    return this.httpClient.get<any>('http://api.tvmaze.com/seasons/' + episodeId + '/episodes');
+  }
 }
